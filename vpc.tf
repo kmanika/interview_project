@@ -80,13 +80,13 @@ resource "aws_security_group" "web-SG" {
     protocol = "tcp"
     to_port = 5000
     cidr_blocks   = ["0.0.0.0/0"]
-  },
+  }
   ingress {
     from_port = 80
     protocol = "http"
     to_port = 80
     cidr_blocks   = ["0.0.0.0/0"]
-  },
+  }
   egress {
     from_port = 0
     protocol = "-1"
