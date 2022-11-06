@@ -15,7 +15,7 @@ resource "aws_instance" "web-apps" {
 
 resource "null_resource" "app-code" {
   provisioner "remote-exec" {
-    inline  =["sudo yum -y install httpd"]
+    inline  =["sudo yum install nginx -y"]
     connection {
       host                  = aws_instance.web-apps.public_ip
       user                  = "ec2-user"
