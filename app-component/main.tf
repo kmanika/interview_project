@@ -20,7 +20,7 @@ resource "null_resource" "app-code" {
       host                  = aws_instance.web-apps.public_ip
       user                  = "ec2-user"
       type                  = "ssh"
-      private_key           = "${file("/Users/mani/Downloads/sandbox.pem")}"
+      private_key           = "${file("/home/ec2-user/flask_py/interview_project/testkey.pem")}"
     }
   }
 }
