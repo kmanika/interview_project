@@ -1,0 +1,9 @@
+[Unit]
+Description=Gunicorn instance to serve myproject
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ec2-user/interview_project/flask_py
+ExecStart=/usr/local/bin/gunicorn --bind 0.0.0.0:5000 wsgi:app
+[Install]
+WantedBy=multi-user.target
