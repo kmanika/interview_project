@@ -15,7 +15,15 @@
 
     - name: SystemD Configuration
       tempfile:
-        src:
+        src: /home/ec2-user/flask_py/interview_project/flask_py/helloworld.service
+        dest: /etc/systemd/system/helloworld.service
+
+    - name: Restart services
+      systemd:
+        name: helloworld
+        state: restarted
+        enabled: yes
+
 
 
 
